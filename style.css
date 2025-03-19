@@ -6,7 +6,10 @@
     font-family: 'Arial', sans-serif;
 }
 
-body {
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -17,6 +20,7 @@ header {
     padding: 10px 0;
     text-align: center;
     position: relative;
+    margin-bottom: -20px; /* Menyesuaikan posisi header lebih ke atas */
 }
 
 .menu-toggle {
@@ -24,7 +28,7 @@ header {
     background: none;
     border: none;
     font-size: 24px;
-    color: black;
+    color: rgb(16, 15, 15);
     cursor: pointer;
     position: absolute;
     top: 15px;
@@ -34,10 +38,12 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -52,7 +58,7 @@ nav ul li a:hover {
     color: #007bff;
 }
 
-/* Animasi Fade In untuk Halaman */
+/* Animasi Fade In */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -64,29 +70,28 @@ nav ul li a:hover {
     }
 }
 
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Menyesuaikan agar deskripsi tidak terlalu turun */
+}
+
 .home, .projects, .contact {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
-}
-
-/* Halaman Beranda */
-.home {
-    text-align: center;
     padding: 20px;
 }
 
-h1, h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Ukuran foto profil diperkecil & Animasi Hover */
+/* Foto Profil */
 .profile-img {
     display: block;
-    width: 250px !important;
-    height: 250px !important;
-    max-width: 250px !important;
-    max-height: 250px !important;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
     border-radius: 50%;
     object-fit: cover;
@@ -97,16 +102,12 @@ h1, h2 {
     transform: scale(1.1);
 }
 
-/* Ukuran foto dalam class index diperkecil */
-.index img {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    max-height: 20px;
-    object-fit: cover;
+/* Halaman Portofolio */
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Halaman Portofolio */
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +116,7 @@ h1, h2 {
 }
 
 .project {
-    background: #dddddd;
+    background: #e4e0d9;
     padding: 15px;
     border-radius: 5px;
     width: 45%;
@@ -138,7 +139,6 @@ h1, h2 {
 /* Halaman Kontak */
 .contact {
     text-align: center;
-    padding: 20px;
 }
 
 form {
@@ -172,7 +172,7 @@ button:active {
     transform: scale(0.95);
 }
 
-/* FontAwesome Ikon */
+/* Ikon Sosial Media */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
@@ -195,13 +195,14 @@ button:active {
     color: #007bff;
 }
 
-/* Footer */
+/* Footer (Tetap di bawah) */
 footer {
     text-align: center;
     padding: 10px;
     background: #333;
     color: white;
-    margin-top: 20px;
+    margin-top: auto;
+    width: 100%;
 }
 
 /* Responsif */
@@ -240,3 +241,4 @@ footer {
         width: 100%;
     }
 }
+
