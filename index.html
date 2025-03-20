@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beranda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="stylebody.css">
 </head>
 <body>
-    <header>
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button> <!-- Tombol menu mobile -->
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
-                <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portofolio</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+    <div class="menubar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portofolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
     <main>
         <section class="home">
             <h1><i class="fas fa-smile"></i> Selamat Datang</h1>
@@ -33,7 +46,7 @@
         <p>&copy; 2025 Livia Putri Maharani</p>
     </footer>
 
-    <script src="script.js"></script> <!-- Hubungkan JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
 
